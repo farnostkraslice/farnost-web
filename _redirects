@@ -4,6 +4,7 @@
 # --- pracovní soubory nemají být veřejně dostupné ---
 /tools/*                    /404.html               404!
 /NAVOD.md                   /404.html               404!
+/CLAUDE.md                  /404.html               404!
 
 # --- stránky ---
 /o-nas/                     /o-nas.html             301
