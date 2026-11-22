@@ -86,6 +86,8 @@ def page(slug, key, title, desc, body, line=True):
 <meta property="og:description" content="{desc}">
 <meta name="theme-color" content="#E3EFFA">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Adorage.otf" as="font" type="font/otf" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -125,6 +127,7 @@ index_body = f'''<section class="hero home" data-line="hero">
     </blockquote>
     <div class="btns reveal d3"><a class="btn" href="o-nas.html">O nás {ARROW}</a></div>
   </div>
+  <div class="home-photo" aria-hidden="true"></div>
 </section>'''
 
 # Dětský tábor – cena (Kč)
@@ -593,4 +596,4 @@ _p.write_text(_p.read_text(encoding="utf-8").replace('<meta charset="utf-8">', '
 
 # favicon
 (ROOT / "assets/favicon.svg").write_text(
-    f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{VB}"><path fill="#F2D35C" fill-rule="evenodd" d="{CHURCH_D}{WINDOWS_D}"/></svg>', encoding="utf-8")
+    f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -110 1250 1250"><rect x="-60" y="-110" width="1250" height="1250" fill="#606E90"/><path fill="{LOGO}" fill-rule="evenodd" d="{CHURCH_D}{WINDOWS_D}"/></svg>', encoding="utf-8")

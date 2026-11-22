@@ -504,3 +504,13 @@ header.scrolled .brand-mark svg{width:62px}
 .foot-legal{display:flex;gap:18px;flex-wrap:wrap}
 .foot-legal a{color:#C9D1E0}
 .check a{border-bottom:1px solid var(--sun);text-decoration:none}
+
+/* úvod na mobilu: fotka jako pevný blok pod textem (neposkakuje při načítání písma ani při scrollu) */
+.home-photo{display:none}
+@media (max-width:860px){
+  .home{display:block;min-height:0;padding-bottom:0;background:#fff}
+  .home::before,.home::after{display:none}
+  .home-photo{display:block;position:relative;z-index:1;width:100%;aspect-ratio:1920/1080;margin-top:clamp(20px,5vw,36px);background:url(assets/img/uvod-960.jpg) 72% 50%/cover no-repeat}
+  .home-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.55) 16%,rgba(255,255,255,0) 38%)}
+}
+@media (max-width:520px){.home-photo{aspect-ratio:4/3;background-size:auto 100%;background-position:78% 50%}}
