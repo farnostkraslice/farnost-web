@@ -1,6 +1,6 @@
 # Web Římskokatolické farnosti Kraslice (farnostkraslice.cz)
 
-Statický web bez build kroku na hostingu Netlify. Zdroj je v soukromém GitHub repozitáři `farnostkraslice/farnost-web` (větev `main`), účet GitHub `farnostkraslice` (na tomto počítači vedle `moera-cz`, přepnout `gh auth switch --user farnostkraslice`). Majitelka komunikuje česky a není programátorka: vysvětlovat jednoduše a česky.
+Statický web bez build kroku na hostingu Netlify (projekt `farnost-web` v Netlify týmu **moera-cz**, adresa farnost-web.netlify.app). Zdroj je ve **veřejném** GitHub repozitáři `farnostkraslice/farnost-web` (veřejný kvůli limitu jednoho přispěvatele na soukromé repo v Netlify Free) (větev `main`), účet GitHub `farnostkraslice` (na tomto počítači vedle `moera-cz`, přepnout `gh auth switch --user farnostkraslice`). Majitelka komunikuje česky a není programátorka: vysvětlovat jednoduše a česky.
 
 ## Struktura
 - Stránky (`index.html`, `o-nas.html`, `historie.html`, `kontakty.html`, `detsky-tabor.html`, `aktuality.html`, `porad-mesice.html`, `404.html`) **generuje `tools/build.py`**. Texty měň tam a spusť `python3 tools/build.py`. HTML needituj ručně.
@@ -17,3 +17,7 @@ Statický web bez build kroku na hostingu Netlify. Zdroj je v soukromém GitHub 
 - Interaktivní prvek: na konci podstránek se díly kostelíka přikutálí a složí (`.church-spot`), pak zprava přiběhne modrý geometrický farář a vběhne do dveří ve věži. Během stránky se nic nekutálí.
 - Ikony sítí v záhlaví plné, bez koleček. Formuláře malé a minimalistické.
 - Tábor: 17.–24. 7. 2027, kapacita 50, cena 5 000 Kč (`TABOR_CENA`), splatnost 31. 5. 2027, VS = datum narození dítěte (DDMMRRRR).
+
+## Doména a DNS
+- farnostkraslice.cz u WEDOS (registrace i DNS, platí do 17. 2. 2027). Pro web: A @ → 75.2.60.5, www CNAME → farnost-web.netlify.app. MX, DKIM, TXT a `*`/`ftp` míří na WEDOS – neměnit (e-mail na doméně).
+- Záloha starého WordPressu: `~/Desktop/farnost-kraslice/zaloha-stary-web-2026-11-22`.

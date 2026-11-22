@@ -10,7 +10,7 @@ Uložení v administraci se zapíše do GitHubu a Netlify web během chvilky sá
 Nastavení je v `admin/config.yml`. **Před spuštěním je potřeba v něm doplnit přesný název GitHub repozitáře** (řádek `repo:`) a v Netlify zapnout přihlašování přes GitHub (OAuth), stejně jako u Moery.
 
 ## Spuštění na Netlify (jednorázově)
-Repozitář: https://github.com/farnostkraslice/farnost-web (soukromý, účet `farnostkraslice`).
+Repozitář: https://github.com/farnostkraslice/farnost-web (veřejný, účet `farnostkraslice`). Projekt na Netlify: `farnost-web` v týmu moera-cz. Doména je u WEDOS a už je přepnutá (A → 75.2.60.5, www → CNAME farnost-web.netlify.app).
 1. **Netlify účet:** app.netlify.com → Sign up → „Continue with GitHub“ účtem farnostkraslice.
 2. **Web:** Add new site → Import an existing project → GitHub → `farnost-web`. Build command nechat prázdné, Publish directory `.` → Deploy.
 3. **Přihláška na tábor:** Site configuration → Forms → Enable form detection, pak znovu nasadit (Deploys → Trigger deploy). Ve Forms → Form notifications → Add notification → Email → `detskytaborslunicko@gmail.com`, formulář `prihlaska-tabor`.
