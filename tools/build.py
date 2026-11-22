@@ -512,7 +512,7 @@ porad_body = f'''<section class="page-hero" data-line="hero"><div class="wrap pa
 </section>'''
 
 notfound_body = f'''<section class="page-hero" style="min-height:70vh"><div class="wrap center">
-  <span class="eyebrow">Chyba 404</span><h1 style="margin:0 auto">Tato stránka neexistuje</h1>
+  <span class="eyebrow">Stránka se přesunula</span><h1 style="margin:0 auto">Přesměrováváme vás na nový web…</h1>
   <div class="btns" style="justify-content:center"><a class="btn" href="index.html">Zpět na úvod {ARROW}</a></div>
 </div></section>'''
 
@@ -525,6 +525,9 @@ page("detsky-tabor.html", "tabor", "Dětský tábor – Římskokatolická farno
 page("aktuality.html", "aktuality", "Aktuality – Římskokatolická farnost Kraslice", "Nadcházející akce a události farnosti Kraslice.", aktuality_body)
 page("porad-mesice.html", "porad", "Pořad měsíce – Římskokatolická farnost Kraslice", "Aktuální pořad bohoslužeb a farní ohlášky.", porad_body)
 page("404.html", "", "Stránka nenalezena – farnost Kraslice", D, notfound_body, line=False)
+# 404: návštěvníka ze staré/neznámé adresy hned pošle na úvod (pojistka k pravidlu /* v _redirects)
+_p = ROOT / "404.html"
+_p.write_text(_p.read_text(encoding="utf-8").replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta http-equiv="refresh" content="0; url=/">\n<meta name="robots" content="noindex">', 1), encoding="utf-8")
 
 # favicon
 (ROOT / "assets/favicon.svg").write_text(

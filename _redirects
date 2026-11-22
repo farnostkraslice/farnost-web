@@ -59,4 +59,4 @@
 # --- záchranná síť: jakákoli další stará adresa, která na novém webu neexistuje → úvodní stránka ---
 # (Netlify ji použije jen tam, kde žádný soubor není, takže stránky nového webu fungují normálně.
 #  Musí zůstat úplně na konci souboru.)
-/*                          /                       301
+/*                          /index.html             301
