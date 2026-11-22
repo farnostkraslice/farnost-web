@@ -7,7 +7,7 @@ Decap CMS, přihlášení přes GitHub (stejně jako u Moery). Upravuje se v ní
 - **Aktuality** – akce (`content/akce.json`): název, datum, čas, místo, krátký popis a podrobnosti. Proběhlé akce se skryjí samy.
 - **Pořad měsíce** – název a PDF s farními ohláškami (`content/porad.json`, PDF se nahrává do `uploads/`).
 Uložení v administraci se zapíše do GitHubu a Netlify web během chvilky sám aktualizuje.
-Nastavení je v `admin/config.yml`. **Před spuštěním je potřeba v něm doplnit přesný název GitHub repozitáře** (řádek `repo:`) a v Netlify zapnout přihlašování přes GitHub (OAuth), stejně jako u Moery.
+Nastavení je v `admin/config.yml`. Přihlašuje se účtem GitHub **farnostkraslice** (GitHub OAuth aplikace „Farnost Kraslice – administrace webu“ je nainstalovaná v Netlify → Security → OAuth). Přihlášky na tábor chodí na detskytaborslunicko@gmail.com (Netlify → Forms → Notifications).
 
 ## Spuštění na Netlify (jednorázově)
 Repozitář: https://github.com/farnostkraslice/farnost-web (veřejný, účet `farnostkraslice`). Projekt na Netlify: `farnost-web` v týmu moera-cz. Doména je u WEDOS a už je přepnutá (A → 75.2.60.5, www → CNAME farnost-web.netlify.app).
