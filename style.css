@@ -493,3 +493,14 @@ header.scrolled .brand-mark svg{width:62px}
 
 /* víc bílé: světle modrý přechod u úvodů podstránek přejde do bílé dřív */
 .page-hero{background:linear-gradient(180deg,var(--mist) 0%,#fff 62%)}
+
+/* právní stránky a patička */
+.legal{max-width:760px}
+.legal h2{font-size:clamp(24px,2.4vw,30px);margin:34px 0 10px}
+.legal h2:first-child{margin-top:0}
+.legal p{font-size:16px}
+.legal a{border-bottom:1px solid var(--sun);text-decoration:none}
+.legal code{font-size:14px;background:var(--mist);padding:1px 6px;border-radius:6px}
+.foot-legal{display:flex;gap:18px;flex-wrap:wrap}
+.foot-legal a{color:#C9D1E0}
+.check a{border-bottom:1px solid var(--sun);text-decoration:none}

@@ -36,6 +36,9 @@ Na konci každé podstránky (sekce s `data-line="end"`) se díly kostelíka př
 Kostelík má vlastní vyhrazené místo (`.church-spot`), takže ho nic nepřekrývá. Adresa s `?kostel=hotovo` ukáže kostelík rovnou složený.
 Po složení přiběhne zprava modrý farář z geometrických tvarů, otevřou se před ním dveře ve věži a vběhne dovnitř (třída `.farar` ve `style.css`, funkce `playPriest` v `main.js`). Když se vyjede nahoru a znovu dolů, zopakuje se to.
 
+## Právní stránky
+`ochrana-osobnich-udaju.html` a `cookies.html` (texty v `tools/build.py`, odkazy v patičce spolu s „© 2026 Římskokatolická farnost Kraslice. Všechna práva vyhrazena.“). Web nepoužívá sledovací cookies, proto nemá lištu se souhlasem. Doby uchování údajů z přihlášky jsou navržené – farnost by je měla potvrdit.
+
 ## Přesměrování ze starého webu
 Soubor `_redirects` (čte ho Netlify) posílá staré adresy z WordPressu (např. `/o-nas/`, `/historie-2/`, `/event/…`, staré PDF ve `/wp-content/uploads/…`) na nové stránky. Na konci je „záchranná síť“: každá jiná adresa, která na novém webu neexistuje, vede na úvodní stránku (proto se stránka 404 prakticky nezobrazí). Začne fungovat po nasazení na Netlify. Přesměrování z `www.` a z `http://` na `https://` zařídí Netlify sám po přidání domény.
 

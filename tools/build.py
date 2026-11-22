@@ -69,7 +69,7 @@ def footer():
     <div><h4>Farní kostel</h4><p>Nejsvětějšího Těla Kristova (Božího Těla)<br>Hradební 1821, 358 01 Kraslice</p></div>
     <div><h4>Údaje</h4><p>IČ: 45374872<br>Č. ú.: 860622379/0800</p><p style="margin-top:10px"><a href="kontakty.html">Kontakty →</a></p></div>
   </div>
-  <div class="foot-bottom"><span>© Římskokatolická farnost Kraslice</span><span>Biskupství plzeňské</span></div>
+  <div class="foot-bottom"><span>© 2026 Římskokatolická farnost Kraslice. Všechna práva vyhrazena.</span><span class="foot-legal"><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a><a href="cookies.html">Zásady cookies</a></span></div>
 </div></footer>'''
 
 def page(slug, key, title, desc, body, line=True):
@@ -417,7 +417,7 @@ tabor_body = f'''<section class="page-hero" data-line="hero"><div class="wrap pa
     <fieldset>
       <legend><span>4</span>Prohlášení zákonného zástupce</legend>
       <label class="check"><input type="checkbox" name="prohlaseni" value="Ano" required><span>Přihlašuji uvedené dítě na Tábor Sluníčko pořádaný Římskokatolickou farností Kraslice. Potvrzuji správnost uvedených údajů a zavazuji se bez zbytečného odkladu oznámit jejich změny, zejména změny zdravotního stavu a kontaktních údajů. Beru na vědomí, že součástí programu mohou být přiměřené pohybové, výletní a duchovní aktivity odpovídající charakteru farního tábora. *</span></label>
-      <label class="check"><input type="checkbox" name="osobni_udaje" value="Ano" required><span>Beru na vědomí, že pořadatel zpracovává údaje potřebné k organizaci tábora, komunikaci se zákonnými zástupci a zajištění bezpečnosti účastníků. Podrobné informace o zpracování osobních údajů mi budou poskytnuty pořadatelem. *</span></label>
+      <label class="check"><input type="checkbox" name="osobni_udaje" value="Ano" required><span>Beru na vědomí, že pořadatel zpracovává údaje potřebné k organizaci tábora, komunikaci se zákonnými zástupci a zajištění bezpečnosti účastníků. Podrobné informace najdete v dokumentu <a href="ochrana-osobnich-udaju.html#tabor" target="_blank" rel="noopener">Ochrana osobních údajů</a>. *</span></label>
       <div class="f" style="margin-top:14px"><span>Souhlas se zveřejněním fotografií a videí dítěte pro prezentaci tábora/farnosti *</span>
         <div class="choice"><label><input type="radio" name="foto_souhlas" value="Souhlasím" required><span>Souhlasím</span></label><label><input type="radio" name="foto_souhlas" value="Nesouhlasím"><span>Nesouhlasím</span></label></div>
         <small class="muted">Neudělení souhlasu nemá vliv na účast dítěte.</small></div>
@@ -511,6 +511,66 @@ porad_body = f'''<section class="page-hero" data-line="hero"><div class="wrap pa
   <div class="church-spot" aria-hidden="true"></div>
 </section>'''
 
+# =====================================================================
+# PRÁVNÍ STRÁNKY
+# =====================================================================
+SPRAVCE = 'Římskokatolická farnost Kraslice, Kpt. Jaroše 321/2, 358 01 Kraslice, IČ 45374872'
+osobni_body = f'''<section class="page-hero" data-line="hero"><div class="wrap">
+  <span class="eyebrow">Právní informace</span>
+  <h1>Ochrana osobních údajů</h1>
+  <p class="lead">Jak zacházíme s údaji, které nám svěříte – zejména v přihlášce na dětský tábor.</p>
+</div></section>
+
+<section data-line="end"><div class="wrap legal">
+  <h2>Kdo údaje zpracovává</h2>
+  <p>Správcem osobních údajů je <b>{SPRAVCE}</b>. Kontakt: <a href="mailto:farnost.kraslice@bip.cz">farnost.kraslice@bip.cz</a>, <a href="tel:+420720512641">+420 720 512 641</a>.</p>
+
+  <h2 id="tabor">Přihláška na dětský tábor</h2>
+  <p><b>Jaké údaje:</b> jméno, datum narození, adresu a zdravotní pojišťovnu dítěte, zda je plavec, kontakty na zákonného zástupce a další osobu pro naléhavé situace a informace důležité pro pobyt (alergie, stravovací omezení, užívané léky a další potřeby dítěte).</p>
+  <p><b>Proč:</b> abychom mohli tábor zorganizovat, komunikovat s rodiči a zajistit bezpečnost a zdraví dětí.</p>
+  <p><b>Právní základ:</b> plnění přihlášky (čl. 6 odst. 1 písm. b) GDPR). Údaje o zdraví zpracováváme na základě výslovného souhlasu zákonného zástupce, který dává odesláním přihlášky (čl. 9 odst. 2 písm. a) GDPR), a k ochraně životně důležitých zájmů dítěte. Fotografie a videa zveřejňujeme jen se samostatným souhlasem, který můžete kdykoli odvolat.</p>
+  <p><b>Jak dlouho:</b> po dobu přípravy a konání tábora a jeho vyúčtování. Údaje o zdraví po skončení tábora smažeme, ostatní údaje nejpozději do jednoho roku, pokud nám zákon neukládá delší dobu (např. účetní doklady o platbě).</p>
+
+  <h2>Platby a dary</h2>
+  <p>Při platbě za tábor nebo daru na účet farnosti vidíme údaje, které nám pošle banka (jméno, číslo účtu, částku a zprávu). Používáme je k přiřazení platby a k vystavení potvrzení o daru. Uchováváme je po dobu stanovenou účetními a daňovými předpisy.</p>
+
+  <h2>Když nám napíšete nebo zavoláte</h2>
+  <p>Údaje z e-mailu nebo telefonu (jméno, kontakt, obsah zprávy) používáme jen k vyřízení vašeho dotazu nebo duchovní služby, o kterou žádáte.</p>
+
+  <h2>Komu údaje předáváme</h2>
+  <p>Údaje neprodáváme ani nepoužíváme k reklamě. Pracují s nimi jen pověření lidé z farnosti a vedoucí tábora a naši techničtí dodavatelé: hosting webu a formulářů <b>Netlify, Inc.</b> (USA, na základě standardních smluvních doložek EU) a e-mailová služba <b>Google</b> (schránka tábora detskytaborslunicko@gmail.com).</p>
+
+  <h2>Zabezpečení</h2>
+  <p>Web běží výhradně přes zabezpečené připojení (HTTPS), přihlášky se odesílají šifrovaně a mají k nim přístup jen pověření správci. Web nepoužívá sledovací nástroje a do vašeho prohlížeče si nic neukládá.</p>
+
+  <h2>Vaše práva</h2>
+  <p>Máte právo na přístup ke svým údajům, jejich opravu nebo výmaz, omezení zpracování, přenositelnost, právo vznést námitku a odvolat souhlas. Stačí napsat na <a href="mailto:farnost.kraslice@bip.cz">farnost.kraslice@bip.cz</a>. Máte také právo podat stížnost u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz" target="_blank" rel="noopener">uoou.gov.cz</a>).</p>
+  <p class="muted">Platné od 22. 11. 2026</p>
+</div>
+  <div class="church-spot" aria-hidden="true"></div>
+</section>'''
+
+cookies_body = f'''<section class="page-hero" data-line="hero"><div class="wrap">
+  <span class="eyebrow">Právní informace</span>
+  <h1>Zásady cookies</h1>
+  <p class="lead">Jaké soubory web farnostkraslice.cz ukládá do vašeho prohlížeče – a jaké ne.</p>
+</div></section>
+
+<section data-line="end"><div class="wrap legal">
+  <h2>Co jsou cookies</h2>
+  <p>Cookies jsou malé soubory, které si web může uložit do vašeho prohlížeče. Používají se například k zapamatování nastavení nebo k měření návštěvnosti.</p>
+  <h2>Jaké cookies používáme</h2>
+  <p><b>Žádné sledovací.</b> Web farnostkraslice.cz nepoužívá analytické, sledovací ani reklamní cookies, neměří vaše chování a nepředává o vás údaje reklamním sítím. Proto se vás ani neptáme na souhlas.</p>
+  <p>Písma, obrázky i dokumenty načítáme z našeho vlastního webu. Na stránce Kontakty je mapa od společnosti Google – načte se až ve chvíli, kdy na ni kliknete, a Google pak může ukládat své soubory podle svých zásad ochrany soukromí. Web je hostován u služby Netlify, která kvůli bezpečnosti a ochraně před útoky zpracovává technické údaje o přístupu (např. IP adresu).</p>
+  <h2>Administrace</h2>
+  <p>Sekce <code>/admin</code> slouží jen správcům webu. Po přihlášení si ukládá technické údaje nezbytné pro přihlášení.</p>
+  <h2>Jak cookies spravovat</h2>
+  <p>Uložené údaje můžete kdykoli smazat v nastavení svého prohlížeče. Pokud bychom v budoucnu začali používat jiné než nezbytné cookies, vyžádáme si předem váš souhlas.</p>
+  <p class="muted">Platné od 22. 11. 2026</p>
+</div>
+  <div class="church-spot" aria-hidden="true"></div>
+</section>'''
+
 notfound_body = f'''<section class="page-hero" style="min-height:70vh"><div class="wrap center">
   <span class="eyebrow">Stránka se přesunula</span><h1 style="margin:0 auto">Přesměrováváme vás na nový web…</h1>
   <div class="btns" style="justify-content:center"><a class="btn" href="index.html">Zpět na úvod {ARROW}</a></div>
@@ -524,6 +584,8 @@ page("kontakty.html", "kontakty", "Kontakty – Římskokatolická farnost Krasl
 page("detsky-tabor.html", "tabor", "Dětský tábor – Římskokatolická farnost Kraslice", "Dětský tábor 17.–24. 7. 2027, kapacita 50 míst: cena, platba, přihlášky a dokumenty ke stažení.", tabor_body)
 page("aktuality.html", "aktuality", "Aktuality – Římskokatolická farnost Kraslice", "Nadcházející akce a události farnosti Kraslice.", aktuality_body)
 page("porad-mesice.html", "porad", "Pořad měsíce – Římskokatolická farnost Kraslice", "Aktuální pořad bohoslužeb a farní ohlášky.", porad_body)
+page("ochrana-osobnich-udaju.html", "", "Ochrana osobních údajů – Římskokatolická farnost Kraslice", "Jak farnost Kraslice zpracovává osobní údaje, zejména z přihlášky na dětský tábor.", osobni_body)
+page("cookies.html", "", "Zásady cookies – Římskokatolická farnost Kraslice", "Web farnosti Kraslice nepoužívá sledovací cookies.", cookies_body)
 page("404.html", "", "Stránka nenalezena – farnost Kraslice", D, notfound_body, line=False)
 # 404: návštěvníka ze staré/neznámé adresy hned pošle na úvod (pojistka k pravidlu /* v _redirects)
 _p = ROOT / "404.html"
