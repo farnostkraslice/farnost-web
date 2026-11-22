@@ -9,6 +9,15 @@ Decap CMS, přihlášení přes GitHub (stejně jako u Moery). Upravuje se v ní
 Uložení v administraci se zapíše do GitHubu a Netlify web během chvilky sám aktualizuje.
 Nastavení je v `admin/config.yml`. **Před spuštěním je potřeba v něm doplnit přesný název GitHub repozitáře** (řádek `repo:`) a v Netlify zapnout přihlašování přes GitHub (OAuth), stejně jako u Moery.
 
+## Spuštění na Netlify (jednorázově)
+Repozitář: https://github.com/farnostkraslice/farnost-web (soukromý, účet `farnostkraslice`).
+1. **Netlify účet:** app.netlify.com → Sign up → „Continue with GitHub“ účtem farnostkraslice.
+2. **Web:** Add new site → Import an existing project → GitHub → `farnost-web`. Build command nechat prázdné, Publish directory `.` → Deploy.
+3. **Přihláška na tábor:** Site configuration → Forms → Enable form detection, pak znovu nasadit (Deploys → Trigger deploy). Ve Forms → Form notifications → Add notification → Email → `detskytaborslunicko@gmail.com`, formulář `prihlaska-tabor`.
+4. **Přihlášení do administrace:** na GitHubu (účet farnostkraslice) Settings → Developer settings → OAuth Apps → New OAuth App: Homepage URL `https://farnostkraslice.cz`, Authorization callback URL `https://api.netlify.com/auth/done`. Vzniklé Client ID a Client secret vložit v Netlify: Site configuration → Access & security → OAuth → Install provider → GitHub.
+5. **Doména:** Domain management → Add a domain → `farnostkraslice.cz`. U registrátora domény změnit jen záznamy pro web (A / CNAME) podle Netlify, záznamy pro e-mail (MX) nechat. HTTPS zapne Netlify sám.
+6. Starý WordPress hosting nechat ještě pár týdnů, stáhnout zálohu a pak zrušit.
+
 ## Jak upravit
 - **Texty stránek:** uprav v `tools/build.py` a spusť `python3 tools/build.py`. HTML soubory needituj ručně, další sestavení by úpravu přepsalo.
 - **Akce (Aktuality):** nejjednodušeji v administraci. Data jsou v `content/akce.json`.
