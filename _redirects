@@ -1,0 +1,61 @@
+# Přesměrování adres ze starého webu (WordPress) na nový web – soubor čte Netlify.
+# Formát: stará adresa   nová adresa   301 (= trvalé přesměrování, Google si ho zapamatuje)
+
+# --- pracovní soubory nemají být veřejně dostupné ---
+/tools/*                    /404.html               404!
+/NAVOD.md                   /404.html               404!
+
+# --- stránky ---
+/o-nas/                     /o-nas.html             301
+/o-nas                      /o-nas.html             301
+/historie-2/                /historie.html          301
+/historie-2                 /historie.html          301
+/historie/                  /historie.html          301
+/kontakty/                  /kontakty.html          301
+/kontakty                   /kontakty.html          301
+/kontakty-2/                /kontakty.html          301
+/kontakty-2                 /kontakty.html          301
+/detsky-tabor/              /detsky-tabor.html      301
+/detsky-tabor               /detsky-tabor.html      301
+/aktuality/                 /aktuality.html         301
+/aktuality                  /aktuality.html         301
+/porad-mesice/              /porad-mesice.html      301
+/porad-mesice               /porad-mesice.html      301
+/uvodni/                    /                       301
+
+# --- akce a kalendář (plugin The Events Calendar) ---
+/event/*                    /aktuality.html         301
+/events/*                   /aktuality.html         301
+/events                     /aktuality.html         301
+/udalosti/*                 /aktuality.html         301
+/udalosti                   /aktuality.html         301
+/mista-konani/*             /aktuality.html         301
+/moje-rezervace/*           /aktuality.html         301
+/farnostkraslice-aktuality/*  /aktuality.html       301
+/kategorie/*                /aktuality.html         301
+/stitky/*                   /aktuality.html         301
+/category/*                 /aktuality.html         301
+/tag/*                      /aktuality.html         301
+
+# --- dokumenty k táboru (staré PDF → nové PDF) ---
+/wp-content/uploads/2026/11/Prihlaska_Tabor_2027_bez_ceny.pdf     /assets/docs/prihlaska-tabor-2027.pdf              301
+/wp-content/uploads/2026/10/posudek-o-zdravotni-zpusobilosti.pdf  /assets/docs/posudek-o-zdravotni-zpusobilosti.pdf  301
+/wp-content/uploads/2026/10/Prohlaseni-rodicu-LT-2026.pdf         /assets/docs/prohlaseni-zakonnych-zastupcu.pdf     301
+/wp-content/uploads/2026/10/Prohlaseni-s-uverejnenim-fotek.pdf    /assets/docs/souhlas-foto.pdf                      301
+
+# --- farní ohlášky a ostatní staré soubory ---
+/wp-content/uploads/2026/11/farni_ohlasky_22_11_az_6_12_2026_upraveno.pdf  /porad-mesice.html  301
+/wp-content/*               /                       301
+/wp-admin/*                 /                       301
+/wp-login.php               /                       301
+/feed/*                     /aktuality.html         301
+/feed                       /aktuality.html         301
+/comments/feed/*            /                       301
+/index.php/*                /                       301
+/xmlrpc.php                 /                       301
+/wp-json/*                  /                       301
+
+# --- záchranná síť: jakákoli další stará adresa, která na novém webu neexistuje → úvodní stránka ---
+# (Netlify ji použije jen tam, kde žádný soubor není, takže stránky nového webu fungují normálně.
+#  Musí zůstat úplně na konci souboru.)
+/*                          /                       301

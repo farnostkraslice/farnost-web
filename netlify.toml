@@ -1,0 +1,25 @@
+# Nastavení hostingu Netlify pro farnostkraslice.cz
+# (přesměrování starých adres jsou v souboru _redirects)
+
+# Bezpečnostní hlavičky pro celý web
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+# Data z administrace: vždy čerstvá
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# Administrace: nikdy neindexovat a necachovat
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

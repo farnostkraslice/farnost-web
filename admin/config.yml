@@ -1,0 +1,54 @@
+# Administrace webu Římskokatolické farnosti Kraslice (Decap CMS) – otevírá se na farnostkraslice.cz/admin
+backend:
+  name: github
+  repo: farnostkraslice/farnost-web
+  branch: main
+  commit_messages:
+    update: "Úprava: {{collection}} – {{slug}}"
+
+locale: cs
+site_url: https://farnostkraslice.cz
+display_url: https://farnostkraslice.cz
+logo_url: /assets/favicon.svg
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: aktuality
+    label: Aktuality
+    editor: { preview: false }
+    files:
+      - name: akce
+        label: Nadcházející akce
+        file: content/akce.json
+        fields:
+          - label: Akce
+            label_singular: akci
+            name: akce
+            widget: list
+            summary: "{{fields.datum}} – {{fields.nazev}}"
+            hint: "Akce, jejichž datum už proběhlo, se na webu automaticky skryjí. Pořadí nehraje roli, web je seřadí podle data."
+            fields:
+              - { label: "Název akce", name: nazev, widget: string }
+              - { label: "Datum", name: datum, widget: datetime, format: "YYYY-MM-DD", date_format: "D. M. YYYY", time_format: false }
+              - { label: "Čas", name: cas, widget: string, required: false, hint: "např. 18:00 nebo 18:00–21:00" }
+              - { label: "Místo", name: misto, widget: string, required: false, hint: "např. Kostel Božího Těla, Kraslice" }
+              - { label: "Krátký popis", name: perex, widget: string, required: false, hint: "Jedna věta, zobrazí se hned pod názvem." }
+              - { label: "Podrobnosti", name: popis, widget: text, required: false, hint: "Zobrazí se po kliknutí na „Více informací“. Odstavce oddělte prázdným řádkem." }
+
+  - name: porad
+    label: Pořad měsíce
+    editor: { preview: false }
+    files:
+      - name: porad
+        label: Aktuální pořad měsíce (farní ohlášky)
+        file: content/porad.json
+        fields:
+          - { label: "Název", name: nazev, widget: string, hint: "např. Farní ohlášky 7. 12. – 20. 12. 2026" }
+          - { label: "Soubor (PDF)", name: soubor, widget: file, hint: "Nahrajte nové PDF s ohláškami. Na webu se zobrazí místo předchozího." }
