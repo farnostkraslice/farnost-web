@@ -514,3 +514,7 @@ header.scrolled .brand-mark svg{width:62px}
   .home-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.55) 16%,rgba(255,255,255,0) 38%)}
 }
 @media (max-width:520px){.home-photo{aspect-ratio:4/3;background-size:auto 100%;background-position:78% 50%}}
+
+/* druhá (zadní) ruka faráře – tmavší, houpe se opačně */
+.pr-arm-b{fill:#3A639A}
+.farar.running .pr-arm-b{animation:pr-swing .4s ease-in-out infinite alternate-reverse}

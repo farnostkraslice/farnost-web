@@ -61,6 +61,7 @@
     priest.innerHTML=`<svg viewBox="0 0 40 60" aria-hidden="true"><g class="pr-bob">
       <rect class="pr-leg pr-l" x="13.5" y="44" width="5.5" height="15" rx="2.5"/>
       <rect class="pr-leg pr-r" x="21" y="44" width="5.5" height="15" rx="2.5"/>
+      <rect class="pr-arm pr-arm-b" x="11" y="21" width="5" height="17" rx="2.5"/>
       <polygon class="pr-body" points="13,19 27,19 32,48 8,48"/>
       <rect class="pr-collar" x="17" y="19" width="6" height="4" rx="1"/>
       <rect class="pr-arm" x="24" y="21" width="5" height="17" rx="2.5"/>
