@@ -41,6 +41,7 @@ collections:
               - { label: "Místo", name: misto, widget: string, required: false, hint: "např. Kostel Božího Těla, Kraslice" }
               - { label: "Krátký popis", name: perex, widget: string, required: false, hint: "Jedna věta, zobrazí se hned pod názvem." }
               - { label: "Podrobnosti", name: popis, widget: text, required: false, hint: "Zobrazí se po kliknutí na „Více informací“. Odstavce oddělte prázdným řádkem." }
+              - { label: "Plakát", name: plakat, widget: image, required: false, choose_url: false, hint: "Propagační plakát nebo fotka k akci (JPG nebo PNG, ideálně na výšku). Po kliknutí se otevře ve velkém." }
 
   - name: porad
     label: Pořad měsíce

@@ -534,3 +534,13 @@ header.scrolled .brand-mark svg{width:62px}
   .photo-hero .page-hero-img{position:relative;inset:auto;width:auto;aspect-ratio:5/4;margin:6px calc(-1 * clamp(20px,4vw,40px)) 0;max-height:none}
   .photo-hero .page-hero-img{-webkit-mask-image:radial-gradient(ellipse 62% 56px at 50% 0,transparent 98%,#000 100%);mask-image:radial-gradient(ellipse 62% 56px at 50% 0,transparent 98%,#000 100%)}
 }
+
+/* ---------- plakáty u akcí ---------- */
+.akce.has-plakat{grid-template-columns:auto 1fr clamp(180px,22vw,260px)}
+.akce-plakat{grid-column:3;grid-row:1 / span 7;align-self:start;display:block;border-radius:14px;overflow:hidden;box-shadow:0 18px 36px -22px rgba(24,35,71,.45);transition:transform .3s ease,box-shadow .3s ease}
+.akce-plakat img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.akce-plakat:hover{transform:translateY(-3px);box-shadow:0 24px 44px -22px rgba(24,35,71,.5)}
+@media (max-width:700px){
+  .akce.has-plakat{grid-template-columns:auto 1fr}
+  .akce-plakat{grid-column:1 / -1;grid-row:auto;order:10;width:min(100%,320px);margin-top:16px;justify-self:start}
+}

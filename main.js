@@ -171,7 +171,9 @@
         const mon=d.toLocaleDateString('cs-CZ',{month:'short'}).replace('.','');
         const wd=d.toLocaleDateString('cs-CZ',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
         const popis=(a.popis||'').split(/\n\s*\n/).map(p=>`<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join('');
-        return `<article class="akce reveal in">
+        const img=a.plakat?String(a.plakat).replace(/^(?!\/|https?:)/,'/'):'';
+        return `<article class="akce reveal in${img?' has-plakat':''}">
+          ${img?`<a class="akce-plakat" href="${esc(img)}" target="_blank" rel="noopener" aria-label="Plakát: ${esc(a.nazev)} (otevřít ve velkém)"><img src="${esc(img)}" alt="Plakát – ${esc(a.nazev)}" loading="lazy"></a>`:''}
           <div class="akce-date"><strong>${d.getDate()}</strong><span>${esc(mon)}</span></div>
           <p class="when">${esc(wd)}${a.cas?' · '+esc(a.cas):''}</p>
           <h3>${esc(a.nazev)}</h3>

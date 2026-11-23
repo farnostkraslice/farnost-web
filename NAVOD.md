@@ -4,7 +4,7 @@ Statický web bez databáze. Stránky vyrábí skript `tools/build.py` (společn
 
 ## Administrace (farnostkraslice.cz/admin)
 Decap CMS, přihlášení přes GitHub (stejně jako u Moery). Upravuje se v ní:
-- **Aktuality** – akce (`content/akce.json`): název, datum, čas, místo, krátký popis a podrobnosti. Proběhlé akce se skryjí samy.
+- **Aktuality** – akce (`content/akce.json`): název, datum, čas, místo, krátký popis, podrobnosti a plakát (nepovinný; na webu se ukáže vedle akce a po kliknutí se otevře ve velkém). Proběhlé akce se skryjí samy.
 - **Pořad měsíce** – název a PDF s farními ohláškami (`content/porad.json`, PDF se nahrává do `uploads/`).
 Uložení v administraci se zapíše do GitHubu a Netlify web během chvilky sám aktualizuje.
 Nastavení je v `admin/config.yml`. Přihlašuje se účtem GitHub **farnostkraslice** (GitHub OAuth aplikace „Farnost Kraslice – administrace webu“ je nainstalovaná v Netlify → Security → OAuth). Přihlášky na tábor chodí na detskytaborslunicko@gmail.com (Netlify → Forms → Notifications).
