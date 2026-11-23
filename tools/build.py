@@ -230,7 +230,7 @@ rows = "".join(f'''<article class="church-row" id="{cid}">
 
 BULB = '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 44c0-6-8-10-8-20a16 16 0 0 1 32 0c0 10-8 14-8 20z"/><path d="M25 50h14M27 56h10"/><line x1="32" y1="2" x2="32" y2="-4"/><path d="M10 10l-4-4M54 10l4-4M4 26H-2M60 26h6"/></svg>'
 
-historie_body = f'''<section class="page-hero" data-line="hero"><div class="wrap page-hero-grid">
+historie_body = f'''<section class="page-hero photo-hero" data-line="hero"><div class="wrap page-hero-grid">
   <div>
     <span class="eyebrow">Historie</span>
     <h1>Příběhy našich kostelů</h1>
@@ -346,7 +346,7 @@ DOCS = [("assets/docs/prihlaska-tabor-2027.pdf", "Přihláška"),
 # dokumenty, které se vyplňují a posílají zvlášť (papírovou přihlášku nahrazuje online formulář)
 docs = "".join(f'<a class="doc" href="{h}" target="_blank" rel="noopener"><i>PDF</i>{t}</a>' for h, t in DOCS[1:])
 MAIL = '<a href="mailto:detskytaborslunicko@gmail.com">detskytaborslunicko@gmail.com</a>'
-tabor_body = f'''<section class="page-hero" data-line="hero"><div class="wrap page-hero-grid">
+tabor_body = f'''<section class="page-hero photo-hero" data-line="hero"><div class="wrap page-hero-grid">
   <div>
     <span class="eyebrow">Dětský tábor</span>
     <h1>Léto plné zážitků, dobrodružství a nových přátel</h1>
@@ -472,7 +472,7 @@ tabor_body = f'''<section class="page-hero" data-line="hero"><div class="wrap pa
 # =====================================================================
 # AKTUALITY
 # =====================================================================
-aktuality_body = f'''<section class="page-hero" data-line="hero"><div class="wrap page-hero-grid">
+aktuality_body = f'''<section class="page-hero photo-hero" data-line="hero"><div class="wrap page-hero-grid">
   <div>
     <span class="eyebrow">Aktuality</span>
     <h1>Aktuality naší farnosti</h1>
@@ -493,7 +493,7 @@ aktuality_body = f'''<section class="page-hero" data-line="hero"><div class="wra
 # =====================================================================
 # POŘAD MĚSÍCE
 # =====================================================================
-porad_body = f'''<section class="page-hero" data-line="hero"><div class="wrap page-hero-grid">
+porad_body = f'''<section class="page-hero photo-hero" data-line="hero"><div class="wrap page-hero-grid">
   <div>
     <span class="eyebrow">Pořad měsíce</span>
     <h1>Buďte stále v obraze</h1>
