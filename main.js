@@ -237,7 +237,7 @@
     const renderT=()=>{
       const msg=('TABOR 2027 '+clean(jm.value)).trim(), vs=toVS(nar.value);
       vsLab.textContent=vs?'VS: '+vs:'VS: datum narození';
-      const q=qrcode(0,'M');q.addData(`SPD*1.0*ACC:${IBAN}*AM:${am.toFixed(2)}*CC:CZK*${qrT.dataset.due?'DT:'+qrT.dataset.due+'*':''}${vs?'X-VS:'+vs+'*':''}MSG:${msg}*`);q.make();
+      const q=qrcode(0,'M');q.addData(`SPD*1.0*ACC:${IBAN}*AM:${am.toFixed(2)}*CC:CZK*${qrT.dataset.due?'DT:'+qrT.dataset.due+'*':''}${vs?'X-VS:'+vs+'*':''}${qrT.dataset.ss?'X-SS:'+qrT.dataset.ss.replace(/\D/g,'')+'*':''}MSG:${msg}*`);q.make();
       qrT.innerHTML=q.createSvgTag({cellSize:4,margin:0,scalable:true});
     };
     jm.addEventListener('input',renderT);nar.addEventListener('input',renderT);renderT();

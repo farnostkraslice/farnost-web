@@ -22,7 +22,7 @@ Repozitář: https://github.com/farnostkraslice/farnost-web (veřejný, účet `
 - **Texty stránek:** uprav v `tools/build.py` a spusť `python3 tools/build.py`. HTML soubory needituj ručně, další sestavení by úpravu přepsalo.
 - **Akce (Aktuality):** nejjednodušeji v administraci. Data jsou v `content/akce.json`.
 - **Pořad měsíce:** nejjednodušeji v administraci. Data jsou v `content/porad.json`.
-- **Cena tábora:** v `tools/build.py` proměnná `TABOR_CENA` (teď 5000). Platí se na účet farnosti 860622379/0800, QR kód na stránce tábora se podle ceny vytvoří sám. Variabilní symbol je datum narození dítěte (DDMMRRRR), rodič ho napíše do políčka u QR kódu. Termín platby se neuvádí.
+- **Cena tábora:** v `tools/build.py` proměnná `TABOR_CENA` (teď 5000). Platí se na účet farnosti 860622379/0800, QR kód na stránce tábora se podle ceny vytvoří sám. Variabilní symbol je datum narození dítěte (DDMMRRRR), rodič ho napíše do políčka u QR kódu. Specifický symbol je pevný 1821 (`data-ss` v `tools/build.py`). Termín platby se neuvádí.
 - **Online přihláška na tábor:** formulář `prihlaska-tabor` na stránce Dětský tábor (texty v `tools/build.py`). Odesílá se přes **Netlify Forms**, funguje tedy až na Netlify (v náhledu na počítači skončí chybou). V Netlify je potřeba v Forms → Form notifications nastavit e-mail **detskytaborslunicko@gmail.com**. Platba je splatná do 31. 5. 2027 (je i v QR kódu).
 - **Dokumenty k táboru:** `assets/docs/`, seznam je v `tools/build.py` (proměnná `DOCS`). Na webu se nabízí jen v upozornění uvnitř online přihlášky (posudek, prohlášení, souhlas s fotkami). Papírová přihláška se neodkazuje, nahrazuje ji online formulář.
 

@@ -453,6 +453,7 @@ tabor_body = f'''<section class="page-hero photo-hero" data-line="hero"><div cla
         <dt>Částka</dt><dd>{TABOR_CENA_TXT} Kč</dd>
         <dt>Splatnost</dt><dd><b>do 31. 5. 2027</b></dd>
         <dt>Variabilní symbol</dt><dd>datum narození dítěte ve tvaru DDMMRRRR<br><span class="muted" style="font-size:15px">např. 15. 3. 2015 → 15032015</span></dd>
+        <dt>Specifický symbol</dt><dd><b>1821</b> <button class="copy" type="button" data-copy="1821">Zkopírovat</button></dd>
         <dt>Zpráva pro příjemce</dt><dd>Tábor 2027 a jméno dítěte</dd>
       </dl>
     </div>
@@ -462,8 +463,8 @@ tabor_body = f'''<section class="page-hero photo-hero" data-line="hero"><div cla
     <p class="muted" style="font-size:15px;margin:0 auto 16px">Vyplňte údaje o dítěti a naskenujte kód v aplikaci své banky.</p>
     <div class="amounts"><input id="tabor-jmeno" style="width:min(100%,280px)" placeholder="jméno a příjmení dítěte" aria-label="Jméno a příjmení dítěte" autocomplete="off">
       <input id="tabor-narozeni" style="width:min(100%,280px)" inputmode="numeric" placeholder="datum narození, např. 15. 3. 2015" aria-label="Datum narození dítěte" autocomplete="off"></div>
-    <div id="qr-tabor" class="qr" aria-label="QR kód pro platbu tábora" data-amount="{TABOR_CENA}" data-due="20270531"></div>
-    <p class="acct">Tábor 2027 · {TABOR_CENA_TXT} Kč · <span id="tabor-vs">VS: datum narození</span><strong>860622379/0800</strong></p>
+    <div id="qr-tabor" class="qr" aria-label="QR kód pro platbu tábora" data-amount="{TABOR_CENA}" data-due="20270531" data-ss="1821"></div>
+    <p class="acct">Tábor 2027 · {TABOR_CENA_TXT} Kč · <span id="tabor-vs">VS: datum narození</span> · SS 1821<strong>860622379/0800</strong></p>
   </div>
 </div>
   <div class="church-spot" aria-hidden="true"></div>

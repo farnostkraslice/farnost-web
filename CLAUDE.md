@@ -16,7 +16,7 @@ Statický web bez build kroku na hostingu Netlify (projekt `farnost-web` v Netli
 - Úvodní stránka maximálně jednoduchá (původní fotka, název, verš, tlačítko O nás). Menu ve stejném pořadí jako na starém webu.
 - Interaktivní prvek: na konci podstránek se díly kostelíka přikutálí a složí (`.church-spot`), pak zprava přiběhne modrý geometrický farář a vběhne do dveří ve věži. Během stránky se nic nekutálí.
 - Ikony sítí v záhlaví plné, bez koleček. Formuláře malé a minimalistické.
-- Tábor: 17.–24. 7. 2027, kapacita 50, cena 5 000 Kč (`TABOR_CENA`), splatnost 31. 5. 2027, VS = datum narození dítěte (DDMMRRRR).
+- Tábor: 17.–24. 7. 2027, kapacita 50, cena 5 000 Kč (`TABOR_CENA`), splatnost 31. 5. 2027, VS = datum narození dítěte (DDMMRRRR), specifický symbol 1821 (`data-ss`).
 
 ## Doména a DNS
 - farnostkraslice.cz u WEDOS (registrace i DNS, platí do 17. 2. 2027). Pro web: A @ → 75.2.60.5, www CNAME → farnost-web.netlify.app. MX, DKIM, TXT a `*`/`ftp` míří na WEDOS – neměnit (e-mail na doméně).
